@@ -4,9 +4,32 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.somemate.demo.user.dao.UserDao">
 
-    <select id="getTestUser" resultType="org.somemate.demo.user.dto.User">
-        select idx, openchat_link, name, password, mbti, age, gender, profile, refreshToken
-        from users
-        where idx=1
+    <select id="saveUser" resultType="org.somemate.demo.user.dto.User">
+        select idx,
+               openchat_link,
+               name,
+               userID,
+               password,
+               mbti,
+               age,
+               gender,
+               profile,
+               refreshToken
+        from user
+        where idx = 1
     </select>
+
+    <update id="updateUser">
+        UPDATE user
+        SET mbti=#{mbti}
+
+        WHERE idx = #{idx}
+    </update>
+
+    <!-- refreshToken 삭제 쿼리 -->
+    <delete id="deleteRefreshToken" parameterType="string">
+        UPDATE user
+        SET refreshToken = NULL
+        WHERE refreshToken = #{refreshToken}
+    </delete>
 </mapper>
