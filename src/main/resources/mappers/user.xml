@@ -21,15 +21,19 @@
 
     <update id="updateUser">
         UPDATE user
-        SET mbti=#{mbti}
-
+        SET name=#{name},
+            openchat_link=#{openChatLink},
+            password=#{password},
+            mbti=#{mbti},
+            age=#{age},
+            gender=#{gender},
+            profile=#{profile}
         WHERE idx = #{idx}
     </update>
 
     <!-- refreshToken 삭제 쿼리 -->
+    <!-- refreshToken 삭제 쿼리 -->
     <delete id="deleteRefreshToken" parameterType="string">
-        UPDATE user
-        SET refreshToken = NULL
-        WHERE refreshToken = #{refreshToken}
+        UPDATE user SET refreshToken = NULL WHERE refreshToken = #{refreshToken}
     </delete>
 </mapper>
