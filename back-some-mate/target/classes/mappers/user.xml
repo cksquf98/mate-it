@@ -26,10 +26,13 @@
             )
             # 매칭 히스토리
           and user.idx not in (
-            select 1 from matching_history where my_idx = #{userIdx} and recommended_idx = user.idx
+            select user.idx from matching_history where my_idx = #{userIdx} and recommended_idx = user.idx
             )
         order by rand()
             limit 1
         ;
     </select>
+    <update id="updateUserMbti" parameterType="User">
+        update user set mbti=#{mbti} where idx=#{idx}
+    </update>
 </mapper>

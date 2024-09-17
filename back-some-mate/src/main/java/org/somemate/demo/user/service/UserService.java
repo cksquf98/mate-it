@@ -12,4 +12,6 @@ public interface UserService {
     String getUserMBTI(int userIdx) throws SQLException;
 
     RecommendedUser getMatchedUserInfo(Map<String, Object> map) throws SQLException;
+
+    int updateUserMbti(User user) throws SQLException;
 }

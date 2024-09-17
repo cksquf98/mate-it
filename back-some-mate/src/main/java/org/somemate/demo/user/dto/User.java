@@ -111,4 +111,20 @@ public class User {
     public void setUserID(String userID) {
         this.userID = userID;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "idx=" + idx +
+                ", openChatLink='" + openChatLink + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", mbti='" + mbti + '\'' +
+                ", refreshToken='" + refreshToken + '\'' +
+                ", gender=" + gender +
+                ", profile='" + profile + '\'' +
+                ", age=" + age +
+                ", userID='" + userID + '\'' +
+                '}';
+    }
 }

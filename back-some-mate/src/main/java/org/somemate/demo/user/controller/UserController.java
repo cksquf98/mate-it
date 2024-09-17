@@ -72,4 +72,19 @@ public class UserController {
 
         return recommendedUser;
     }
+
+    @PatchMapping("/updateUserMbti")
+    public int updateUserMbti(@RequestBody User user) throws SQLException {
+        int result = -1;
+        System.out.println("user : " + user.toString());
+        try {
+            result = userService.updateUserMbti(user);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+
 }

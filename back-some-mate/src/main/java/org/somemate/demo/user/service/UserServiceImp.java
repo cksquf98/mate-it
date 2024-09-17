@@ -28,4 +28,9 @@ public class UserServiceImp implements UserService {
     public RecommendedUser getMatchedUserInfo(Map<String, Object> map) throws SQLException {
         return userDao.getMatchedUserInfo(map);
     }
+
+    @Override
+    public int updateUserMbti(User user) throws SQLException{
+        return userDao.updateUserMbti(user);
+    }
 }
