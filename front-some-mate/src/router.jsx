@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import PageWrapper from './layout/PageWrapper';
 import MainPage from './pages/MainPage';
-import ResultPage from './pages/ResultPage';
-import MatchingPage from './pages/MatchingPage';
+import SignPage from './pages/SignPage';
+
+
 
 export const router = createBrowserRouter([
   {
@@ -11,13 +12,9 @@ export const router = createBrowserRouter([
     children: [{ index: true, element: <MainPage /> }],
   },
   {
-    path: '/result/:result',
+    path: '/sign',
     element: <PageWrapper />,
-    children: [{ index: true, element: <ResultPage /> }],
-  },
-  {
-    path: '/matching',
-    element: <PageWrapper />,
-    children: [{ index: true, element: <MatchingPage /> }],
+    children: [{ index: true, element: <SignPage /> }],
   },
 ]);
+

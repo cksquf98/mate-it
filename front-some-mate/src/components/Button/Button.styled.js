@@ -20,7 +20,7 @@ export const BlueButton = styled(GrayButton)`
   color: white;
   border: 2px solid #8bc4ef;
   ${({ theme }) =>
-    theme === "white" &&
+    theme === 'white' &&
     `
     background-color: white;
     color: #8bc4ef;

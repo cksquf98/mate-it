@@ -2,7 +2,6 @@ import * as S from './MatchingPage.styled';
 import MatchingPageLogo from '../../assets/logo/MatchingPageLogo.svg?react';
 import MatchedUserProfile from '../../components/MatchedUserProfile';
 import MatchingLogo from '../../assets/logo/matchingLogo.svg?react';
-import { GrayButton } from '../../components/Button/Button.styled';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import postMatchingHistory from '../../services/postMatchingHistory';
